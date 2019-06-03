@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Part 3</title>
+</head>
+<link rel="stylesheet" type="text/css" href="index.css">
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Part One</a>
+        <a href="index2.html">Part Two</a>
+        <a href="index3.html">Part Three</a>
+        <a href="index4.html">Part Five</a>
+    </div>
+
+<form onSubmit="mySubmitFunction()">
+    Username:<br>
+    <input id="userN" type="text" name="firstName"><br>
+    Password:<br>
+    <input id="ptext" type="text" name="passWord"><br>
+    Email:<br>
+    <input type="email" name="email"><br>
+    <input id="submitButton" type="submit">
+
+   <!--- ><button id="submitButton">Submit</button> -->
+  
+
+</form>
+</body>
+<script>
+    const mySubmitFunction = () => {
+ 
+    if (document.getElementById("ptext").value == "12345678"){
+
+      
+        document.body.innerHTML = "<h1> Correct </h1>"
+
+    } else if (document.getElementById("ptext").value !== "12345678") {
+
+             alert("Wrong Password");
+    } else {
+        stop();
+    }
+}
+</script>
+</html>

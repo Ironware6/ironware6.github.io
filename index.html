@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" type="text/css" href="index.css">
+<head>
+	<title>Part 1</title>
+</head>
+<body>
+        <div class="topnav" id="myTopnav">
+            <a href="index.html">Part One</a>
+            <a href="index2.html">Part Two</a>
+            <a href="index3.html">Part Three</a>
+            <a href="index4.html">Part Five</a>
+        
+        </div>
+    <button id="spiderman" >Spiderman</button>
+    <text id="para"></text>
+    <div>
+        </div>
+    
+    <button id="goku">Ultra Instinct Goku</button> <text id="para2"></text>
+</body>
+<script>
+            // DOM . get an Element by its ID . an Event to click and process a function
+            document.getElementById("spiderman").addEventListener("click", function(event){
+                // variable text  = DOM.Element by ID(text box named para)
+                let text = document.getElementById("para");
+                //text
+                text.innerText = "I'm Right"; 
+
+                let text1 = document.getElementById("para2");
+                text1.innerText = "";
+
+            
+            });
+
+            
+            document.getElementById("goku").addEventListener("click", function(event){
+                let text2 = document.getElementById("para2");
+                text2.innerText = "No, I'm Right"; 
+
+                let text3 = document.getElementById("para");
+                text3.innerText = "";
+            
+            });
+        
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Part 5</title>
+    </head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    
+    <body>
+        <div class="topnav" id="myTopnav">
+        <a href="index.html">Part One</a>
+        <a href="index2.html">Part Two</a>
+        <a href="index3.html">Part Three</a>
+        <a href="index4.html">Part Five</a>
+        
+    </div>
+    <form id ="sphereCal">
+    Sphere Radius:<br>
+    <label for="radius">Radius</label><input type="text" name="radius" id="radius">
+    <label for="volume">Volume</label><input type="text" name="volume" id="volume">
+    
+    <input type="submit" value="Calculate" id="submit">
+    </form>
+       
+
+    </body>
+    <script>
+     function volume_sphere() {
+            let volume = 0;
+            let radius = document.getElementById('radius').value; 
+            volume = (4 / 3) * Math.PI * Math.pow(radius, 3);
+            volume = volume.toFixed(3);
+            document.getElementById('volume').value = volume;
+            return false; // we return false so the page doesnt reload 
+        }
+        window.onload = document.getElementById('sphereCal').onsubmit = volume_sphere;
+    </script>
+    
+</html>
